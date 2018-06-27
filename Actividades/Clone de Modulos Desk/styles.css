@@ -1,0 +1,151 @@
+
+body {
+
+	background-color: #f6f6f6;
+	color: #43525a;
+	font-family: 'Muli', sans-serif;
+
+}
+.col-4{
+	
+	display: inline-block;
+	width: 31%;
+	
+}
+
+.text-left{
+
+text-align: left;
+	
+}
+.text-center {
+
+text-align: center;
+}
+
+.text-right{
+
+text-align: right;
+}
+
+.col-9 {
+display: inline-block;
+	width: 70%;
+	
+	
+}
+
+.col-3{
+
+display: inline-block;
+	width: 24%;
+	overflow: auto;
+	padding-left: 50px;
+	
+
+
+}
+
+.col-6{
+
+display: inline-block;
+
+width: 48%;
+padding-top: 50px;
+}
+
+.col-12{
+
+display: inline-block;
+
+width: 98%;
+padding-top: 50px;
+}
+
+
+.mx-5 {
+
+	margin: 5px 5px 5px 5px;
+}
+
+header{
+
+	margin: 5px 5px 100px 5px;
+}
+
+
+h1 {
+
+	font-size: 3.5rem;
+	color: #43525a;
+	font-weight: 600;
+	margin-top: -15px;
+}
+
+p{
+
+	color: #43525a;
+	font-size: 1rem;
+}
+
+a{
+
+	text-decoration: none;
+	color: #43525a;
+	padding: 0.9rem;
+}
+
+.logo {
+
+	padding: 5px;
+	;
+}
+
+
+.bloque2 {
+
+	width: 100%;
+	height: auto;
+
+
+}
+
+
+.col-right{
+
+	padding: 20px;
+	font-size: 1rem;
+}
+
+
+.row{
+
+	display: flex;
+}
+
+.piedepagina{
+
+	font-style: italic;
+	font-size: 1rem;
+
+}
+
+.boton2 {
+
+	padding: 1.7rem;
+	color: #fff;
+	text-align: center;
+	background-color: #28A5BE;
+	text-decoration: none;
+	border: none;
+}
+
+.bmenu{
+
+border: none;
+background-color: transparent;
+
+}
+
+
+
