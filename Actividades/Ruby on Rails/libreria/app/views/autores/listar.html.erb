@@ -1,0 +1,16 @@
+ <h1>Listar Autores</h1>
+
+
+  <table>
+  <tr>
+    <th>Nombre</th>
+    <th>Descripción</th>
+  </tr>
+
+   <% for item in @autores %>
+    <tr>
+      <td><%= item[:nombre] %></td>
+      <td><%= item[:apellidos] %></td>
+    </tr>
+<%end%>
+</table>
