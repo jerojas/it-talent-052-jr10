@@ -12,9 +12,14 @@ end
 def create
 
 b = eval (request.body.read)
+
+libro = Libro.new(b)
+libro.autor = Autor.find(1)
+libro.save
+
 render json: {
 
-	status: 'ok'
+	status: libro.id
 }
 
 	end
