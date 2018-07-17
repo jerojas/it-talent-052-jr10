@@ -1,0 +1,2 @@
+class ModalidadRoboController < ApplicationController
+end

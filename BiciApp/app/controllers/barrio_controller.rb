@@ -1,0 +1,2 @@
+class BarrioController < ApplicationController
+end

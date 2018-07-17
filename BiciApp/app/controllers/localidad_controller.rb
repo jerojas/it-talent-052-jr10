@@ -1,0 +1,2 @@
+class LocalidadController < ApplicationController
+end
