@@ -1,0 +1,92 @@
+<!-- Migración tabla usuario -->
+
+ create_table :usuario do |t|
+
+    	t.string :usuario
+    	t.string :nombre
+    	t.string :apellidos
+    	t.string :documento
+    	t.string :email
+    	t.string :celular
+    	t.string :adjunto_foto
+    	t.timestamps
+
+
+      <!-- Migración tabla tipo documento -->
+
+
+ create_table :tipo_documento do |t|
+
+    	t.string :nombre
+    	t.timestamps
+
+
+      <!-- Migración tabla tipo genero -->
+
+       create_table :genero do |t|
+
+    	t.string :nombre
+    	t.timestamps
+
+
+
+      <!-- Migración tabla tipo denuncia -->
+
+       create_table :denuncia do |t|
+
+        t.date :fecha_robo
+    	t.string :num_atracadores
+    	t.string :direccion_robo
+    	t.string :descripcion_robo
+    	t.string :num_serial
+    	t.string :adjunto_bici
+    	t.timestamps
+
+
+    	 <!-- Migración tabla tipo modalidad_robo -->
+
+        create_table :modalidad_robo do |t|
+
+    	t.string :nombre
+    	t.timestamps
+
+    	 <!-- Migración tabla localidad -->
+
+    	 create_table :localidad do |t|
+
+    	t.string :nombre
+    	t.timestamps
+
+    	 <!-- Migración tabla barrio -->
+
+    	 create_table :barrio do |t|
+
+    	t.string :nombre
+    	t.timestamps
+
+
+
+
+ <!-- Agregar referencia a Usuario-->
+
+  class AgregarFkUsuario < ActiveRecord::Migration[5.0]
+  def change
+
+  	add_reference :usuario, :tipo_documento, index: true,
+  	add_reference :usuario, :genero, index: true
+  end
+end
+
+
+ <!-- Agregar referencia a Usuario-->
+
+
+   class AgregarFkDenuncia < ActiveRecord::Migration[5.0]
+  def change
+
+  	add_reference :denuncia, :modalidad, index: true,
+  	add_reference :denuncia, :localidad, index: true,
+  	add_reference :denuncia, :barrio, index: true,
+  	add_reference :denuncia, :usuario, index: true
+  end
+end
