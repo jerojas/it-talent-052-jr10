@@ -1,5 +1,5 @@
 class Perfil < ApplicationRecord
 
-	 has_many :denuncia
+	 has_many :denuncias
 	 belongs_to :users 
 end

@@ -1,6 +1,6 @@
 class Localidad < ApplicationRecord
 
-	 has_many :denuncia
+	 has_many :denuncias
 	  has_many :barrios
 
 

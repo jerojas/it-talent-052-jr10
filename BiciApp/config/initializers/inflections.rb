@@ -11,6 +11,20 @@
 # end
 
 # These inflection rules are supported but not enabled by default:
-# ActiveSupport::Inflector.inflections(:en) do |inflect|
-#   inflect.acronym 'RESTful'
-# end
+ActiveSupport::Inflector.inflections(:en) do |inflect|
+  inflect.irregular 'localidad', 'localidades'
+    inflect.irregular 'Localidad', 'Localidades'
+    inflect.irregular 'barrio', 'barrios'
+    inflect.irregular 'Barrio', 'Barrios'
+    inflect.irregular 'denuncia', 'denuncias'
+    inflect.irregular 'Denuncia', 'Denuncias'
+    inflect.irregular 'modalidad_robo', 'modalidad_robos'
+    inflect.irregular 'Modalidad_robo', 'Modalidad_robos'
+    inflect.irregular 'perfil', 'perfiles'
+    inflect.irregular 'Perfil', 'Perfiles'
+    
+    
+    
+end
+
+

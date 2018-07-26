@@ -1,5 +1,5 @@
 class ModalidadRobo < ApplicationRecord
 
-	 has_many :denuncia
+	 has_many :denuncias
 	 
 end

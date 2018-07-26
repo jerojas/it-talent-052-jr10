@@ -1,6 +1,6 @@
 class Barrio < ApplicationRecord
 
- has_many :denuncia
- belongs_to :localidads 
+ has_many :denuncias
+ belongs_to :localidad
 
 end

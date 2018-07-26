@@ -19,11 +19,11 @@ ActiveRecord::Schema.define(version: 20180717180610) do
     t.string "nombre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "localidads_id"
-    t.index ["localidads_id"], name: "index_barrios_on_localidads_id"
+    t.bigint "localidad_id"
+    t.index ["localidad_id"], name: "index_barrios_on_localidad_id"
   end
 
-  create_table "denuncia", force: :cascade do |t|
+  create_table "denuncias", force: :cascade do |t|
     t.date "fecha_robo"
     t.string "num_atracadores"
     t.string "direccion_robo"
@@ -32,17 +32,17 @@ ActiveRecord::Schema.define(version: 20180717180610) do
     t.string "adjunto_bici"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "modalidad_robos_id"
-    t.bigint "localidads_id"
-    t.bigint "barrios_id"
-    t.bigint "perfils_id"
-    t.index ["barrios_id"], name: "index_denuncia_on_barrios_id"
-    t.index ["localidads_id"], name: "index_denuncia_on_localidads_id"
-    t.index ["modalidad_robos_id"], name: "index_denuncia_on_modalidad_robos_id"
-    t.index ["perfils_id"], name: "index_denuncia_on_perfils_id"
+    t.bigint "modalidad_robo_id"
+    t.bigint "localidad_id"
+    t.bigint "barrio_id"
+    t.bigint "perfil_id"
+    t.index ["barrio_id"], name: "index_denuncias_on_barrio_id"
+    t.index ["localidad_id"], name: "index_denuncias_on_localidad_id"
+    t.index ["modalidad_robo_id"], name: "index_denuncias_on_modalidad_robo_id"
+    t.index ["perfil_id"], name: "index_denuncias_on_perfil_id"
   end
 
-  create_table "localidads", force: :cascade do |t|
+  create_table "localidades", force: :cascade do |t|
     t.string "nombre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20180717180610) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "perfils", force: :cascade do |t|
+  create_table "perfiles", force: :cascade do |t|
     t.string "nombre"
     t.string "apellidos"
     t.string "documento"
@@ -62,10 +62,10 @@ ActiveRecord::Schema.define(version: 20180717180610) do
     t.string "adjunto_foto"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "users_id"
+    t.bigint "user_id"
     t.string "tipo_documento"
     t.string "genero", limit: 1
-    t.index ["users_id"], name: "index_perfils_on_users_id"
+    t.index ["user_id"], name: "index_perfiles_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
